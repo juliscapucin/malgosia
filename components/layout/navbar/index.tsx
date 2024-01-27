@@ -10,7 +10,8 @@ import Search from './search';
 const { SITE_NAME } = process.env;
 
 export default async function Navbar() {
-  const menu = await getMenu('next-js-frontend-header-menu');
+  const menu = await getMenu('header-menu');
+  const mainMenu = await getMenu('main-menu');
 
   return (
     <nav className="relative flex items-center justify-between p-4 lg:px-6">
