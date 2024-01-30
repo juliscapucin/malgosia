@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        primary: ['var(--font-primary)'],
         sans: ['var(--font-geist-sans)']
       },
       keyframes: {
