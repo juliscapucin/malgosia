@@ -37,21 +37,9 @@ export function HeroCarouselImage({
   );
 }
 
-function HeroCarouselItem({
-  item,
-  priority,
-  slideIndex
-}: {
-  item: Product;
-  priority?: boolean;
-  slideIndex: number;
-}) {
+function HeroCarouselItem({ item, priority }: { item: Product; priority?: boolean }) {
   return (
-    <Link
-      className="relative h-full w-full min-w-full"
-      href={`/product/${item.handle}`}
-      style={{ transform: `translate3d(${-slideIndex * 100}%, 0, 0)` }}
-    >
+    <Link className="relative h-full w-full min-w-full" href={`/product/${item.handle}`}>
       <HeroCarouselImage
         src={item.featuredImage.url}
         fill
@@ -76,10 +64,19 @@ export function HeroCarousel({ items }: { items: Product[] }) {
   const slideIndex = useSlideshow(items.length, 2000);
 
   return (
-    <section className="relative flex h-screen w-screen gap-1 overflow-x-clip">
-      <HeroCarouselItem item={firstProduct} slideIndex={slideIndex} priority={true} />
-      <HeroCarouselItem item={secondProduct} slideIndex={slideIndex} priority={true} />
-      <HeroCarouselItem item={thirdProduct} slideIndex={slideIndex} />
+    <section className="relative h-screen w-screen overflow-x-clip">
+      <div
+        className={clsx(
+          'relative flex h-screen w-screen gap-2 px-1',
+          slideIndex > 0 && 'transition-transform duration-1000 ease-in-out'
+        )}
+        style={{ transform: `translate3d(${-slideIndex * 100}%, 0, 0)` }}
+      >
+        <HeroCarouselItem item={firstProduct} priority={true} />
+        <HeroCarouselItem item={secondProduct} priority={true} />
+        <HeroCarouselItem item={thirdProduct} />
+        <HeroCarouselItem item={firstProduct} />
+      </div>
     </section>
   );
 }
