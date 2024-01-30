@@ -10,7 +10,7 @@ const { COMPANY_NAME, SITE_NAME } = process.env;
 export default async function Footer() {
   const currentYear = new Date().getFullYear();
   const copyrightDate = 2024 + (currentYear > 2024 ? `-${currentYear}` : '');
-  const skeleton = 'w-full h-6 animate-pulse rounded bg-neutral-200 dark:bg-neutral-700';
+  const skeleton = 'w-full h-6 animate-pulse bg-neutral-200 dark:bg-neutral-700';
   const menu = await getMenu('footer');
   const copyrightName = COMPANY_NAME || SITE_NAME || '';
 

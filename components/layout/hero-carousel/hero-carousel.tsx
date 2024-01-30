@@ -61,14 +61,14 @@ export function HeroCarousel({ items }: { items: Product[] }) {
   if (!items[0] || !items[1] || !items[2]) return null;
   const [firstProduct, secondProduct, thirdProduct] = items;
 
-  const slideIndex = useSlideshow(items.length, 2000);
+  const slideIndex = useSlideshow(items.length, 4000);
 
   return (
     <section className="relative h-screen w-screen overflow-x-clip">
       <div
         className={clsx(
           'relative flex h-screen w-screen gap-2 px-1',
-          slideIndex > 0 && 'transition-transform duration-1000 ease-in-out'
+          slideIndex > 0 && 'transition-transform duration-500 ease-in-out'
         )}
         style={{ transform: `translate3d(${-slideIndex * 100}%, 0, 0)` }}
       >
