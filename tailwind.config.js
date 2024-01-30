@@ -7,7 +7,6 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ['var(--font-primary)'],
-        sans: ['var(--font-geist-sans)']
       },
       keyframes: {
         fadeIn: {
