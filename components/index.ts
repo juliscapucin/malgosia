@@ -1,3 +1,3 @@
-import { HeroCarousel } from './hero-carousel';
+import { HeroCarouselWrapper } from './layout/hero-carousel';
 
-export { HeroCarousel };
+export { HeroCarouselWrapper };
