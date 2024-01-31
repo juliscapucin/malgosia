@@ -10,15 +10,15 @@ const { COMPANY_NAME, SITE_NAME } = process.env;
 export default async function Footer() {
   const currentYear = new Date().getFullYear();
   const copyrightDate = 2024 + (currentYear > 2024 ? `-${currentYear}` : '');
-  const skeleton = 'w-full h-6 animate-pulse bg-neutral-200 dark:bg-neutral-700';
+  const skeleton = 'w-full h-6 animate-pulse bg-faded';
   const menu = await getMenu('footer');
   const copyrightName = COMPANY_NAME || SITE_NAME || '';
 
   return (
-    <footer className="text-sm text-neutral-500 dark:text-neutral-400">
-      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 border-t border-neutral-200 px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0 dark:border-neutral-700">
+    <footer className="text-faded text-sm">
+      <div className="border-faded mx-auto flex w-full max-w-7xl flex-col gap-6 border-t px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0 dark:border-neutral-700">
         <div>
-          <Link className="flex items-center gap-2 text-black md:pt-1 dark:text-white" href="/">
+          <Link className="flex items-center gap-2 md:pt-1" href="/">
             <LogoSquare size="sm" />
             <span className="uppercase">{SITE_NAME}</span>
           </Link>
@@ -38,16 +38,14 @@ export default async function Footer() {
           <FooterMenu menu={menu} />
         </Suspense>
       </div>
-      <div className="border-t border-neutral-200 py-6 text-sm dark:border-neutral-700">
+      <div className="border-faded border-t py-6 text-sm">
         <div className="mx-auto flex w-full max-w-7xl flex-col items-center gap-1 px-4 md:flex-row md:gap-0 md:px-4 min-[1320px]:px-0">
           <p>
             &copy; {copyrightDate} {copyrightName}
             {copyrightName.length && !copyrightName.endsWith('.') ? '.' : ''} All rights reserved
           </p>
           <p className="md:ml-auto">
-            <a href="https://juliscapucin.com" className="text-black dark:text-white">
-              Crafted by Juli Scapucin
-            </a>
+            <a href="https://juliscapucin.com">Crafted by Juli Scapucin</a>
           </p>
         </div>
       </div>
