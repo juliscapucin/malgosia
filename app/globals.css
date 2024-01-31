@@ -1,4 +1,4 @@
-@import url("https://use.typekit.net/lcs4ric.css");
+@import url("https://use.typekit.net/ysk5vua.css");
 
 @tailwind base;
 @tailwind components;
@@ -6,8 +6,9 @@
 
 
 :root {
-  --font-primary: 'letter-gothic-std', monospace;
+  --font-primary: "letter-gothic-std", monospace;
 }
+
 
 /* @media (prefers-color-scheme: dark) {
   html {

@@ -3,8 +3,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import { useSlideshow } from 'app/hooks';
 import clsx from 'clsx';
+
+import { useSlideshow } from 'hooks';
 import { Product } from 'lib/shopify/types';
 
 export function HeroCarouselImage({
