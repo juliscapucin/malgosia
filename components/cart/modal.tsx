@@ -96,10 +96,7 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                       );
 
                       return (
-                        <li
-                          key={i}
-                          className="flex w-full flex-col border-b border-neutral-300 dark:border-neutral-700"
-                        >
+                        <li key={i} className="border-faded flex w-full flex-col border-b">
                           <div className="relative flex w-full flex-row justify-between px-1 py-4">
                             <div className="absolute z-40 -mt-2 ml-[55px]">
                               <DeleteItemButton item={item} />
@@ -176,7 +173,7 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                   </div>
                   <a
                     href={cart.checkoutUrl}
-                    className="bg-faded text-primary block w-full p-3 text-center text-sm font-medium opacity-90 hover:opacity-100"
+                    className="bg-secondary text-primary block w-full p-3 text-center text-sm font-medium opacity-90 hover:opacity-100"
                   >
                     Proceed to Checkout
                   </a>
