@@ -18,9 +18,8 @@ export default async function Footer() {
     <footer className="text-faded text-sm">
       <div className="border-faded mx-auto flex w-full max-w-7xl flex-col gap-6 border-t px-6 py-12 text-sm md:flex-row md:gap-12 md:px-4 min-[1320px]:px-0 dark:border-neutral-700">
         <div>
-          <Link className="flex items-center gap-2 md:pt-1" href="/">
+          <Link className="flex items-center gap-2 md:pt-1" href="/" aria-label="Malgosia logo">
             <LogoSquare size="sm" />
-            <span className="uppercase">{SITE_NAME}</span>
           </Link>
         </div>
         <Suspense
