@@ -6,10 +6,10 @@ import FilterList from './filter';
 
 async function CollectionList() {
   const collections = await getCollections();
-  return <FilterList list={collections} title="Collections" />;
+  return <FilterList list={collections} title="Categories" />;
 }
 
-const skeleton = 'mb-3 h-4 w-5/6 animate-pulse rounded';
+const skeleton = 'mb-3 h-4 w-5/6 animate-pulse';
 const activeAndTitles = 'bg-neutral-800 dark:bg-neutral-300';
 const items = 'bg-neutral-400 dark:bg-neutral-700';
 
