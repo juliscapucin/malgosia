@@ -8,6 +8,11 @@ module.exports = {
       fontFamily: {
         primary: ['var(--font-primary)'],
       },
+      colors: {
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        faded: 'rgb(var(--color-faded) / <alpha-value>)',
+     },
       keyframes: {
         fadeIn: {
           from: { opacity: 0 },

@@ -26,8 +26,8 @@ export function HeroCarouselImage({
     <div
       className={clsx('group flex h-full w-full items-center justify-center overflow-hidden', {
         relative: label,
-        'border-2 border-blue-600': active,
-        'border-neutral-200 dark:border-neutral-800': !active
+        'border-faded border-2': active,
+        'border-faded': !active
       })}
     >
       {props.src ? (
